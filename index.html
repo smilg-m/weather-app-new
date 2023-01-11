@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather app</title>
   </head>
@@ -23,7 +24,6 @@
     <div class="container">
       <div class="app-wrapper">
         <div class="weather-app">
-         
           <div class="search-area">
             <div class="row">
               <div class="col-6">
@@ -38,7 +38,7 @@
           </div>
 
           <div class="location-zone">
-            <h2>Vilnius</h2>
+            <h2 id="city"></h2>
             <p>Tuesday, January 10, 17:37</p>
           </div>
 
@@ -49,15 +49,16 @@
                 alt=""
                 height="45px"
                 class="current-icon"
+              
               />
               <div class="weather-description">
                 <ul>
-                  <li>mostly cloudy</li>
-                  <li class="feels-like">feels like -15 °C</li>
+                  <li id="description">mostly cloudy</li>
+                  <li class="feels-like" id="feels-like">feels like -15 °C</li>
                 </ul>
               </div>
             </div>
-            <div class="col"><h1>2°</h1></div>
+            <div class="col"><h1 id="temperature">°</h1></div>
           </div>
 
           <hr class="regular" />
@@ -65,15 +66,15 @@
             <div class="row">
               <div class="col-4 text-center">
                 <img src="images/Humidity.svg" alt="" height="24px" /> <br />
-                <h5>82 %</h5>
+                <h5 id="humidity">82 %</h5>
               </div>
               <div class="col-4 text-center">
                 <img src="images/Wind-speed.svg" alt="" height="24px" /> <br />
-                <h5>9 m/s</h5>
+                <h5 id="wind-speed">9 m/s</h5>
               </div>
               <div class="col-4 text-center">
                 <img src="images/Visibility.svg" alt="" height="20px" /> <br />
-                <h5>1200 m</h5>
+                <h5 id="visibility">1200 m</h5>
               </div>
             </div>
           </div>
