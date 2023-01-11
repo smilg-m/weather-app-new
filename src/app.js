@@ -72,7 +72,7 @@ function updateTemperature(response) {
 
 let apiKey = "a3eff06504c1b7o0f0182e14a7e1e6dt";
 let units = "metric";
-let city = "Lisbon";
+let city = "Vilnius";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 console.log(apiUrl);
 

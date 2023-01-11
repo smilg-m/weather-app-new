@@ -98,7 +98,7 @@ li:first-letter {
 }
 
 .search-area {
-  max-width: 100%;
+  max-width: 480px;
 }
 
 .form-control {
