@@ -10,104 +10,97 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather app</title>
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="row">
-          <div class="col-2">
-            <form>
-              <input class="form-control" type="text" name="Enter a city" />
-            </form>
+      <div class="app-wrapper">
+        <div class="weather-app">
+         
+          <div class="search-area">
+            <div class="row">
+              <div class="col-6">
+                <form>
+                  <input class="form-control" type="text" name="Enter a city" />
+                </form>
+              </div>
+              <div class="col-6">
+                <button class="btn btn-outline-dark">Search</button>
+              </div>
+            </div>
           </div>
-          <div class="col-2">
-            <button class="btn btn-dark">Search</button>
+
+          <div class="location-zone">
+            <h2>Vilnius</h2>
+            <p>Tuesday, January 10, 17:37</p>
           </div>
+
+          <div class="row">
+            <div class="col">
+              <img
+                src="images/Clouds-wind.svg"
+                alt=""
+                height="45px"
+                class="current-icon"
+              />
+              <div class="weather-description">
+                <ul>
+                  <li>mostly cloudy</li>
+                  <li class="feels-like">feels like -15 °C</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col"><h1>2°</h1></div>
+          </div>
+
+          <hr class="regular" />
+          <div class="weather-properties">
+            <div class="row">
+              <div class="col-4 text-center">
+                <img src="images/Humidity.svg" alt="" height="24px" /> <br />
+                <h5>82 %</h5>
+              </div>
+              <div class="col-4 text-center">
+                <img src="images/Wind-speed.svg" alt="" height="24px" /> <br />
+                <h5>9 m/s</h5>
+              </div>
+              <div class="col-4 text-center">
+                <img src="images/Visibility.svg" alt="" height="20px" /> <br />
+                <h5>1200 m</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 
+<hr class="divider" />
+
+
+          <div class="row">
+            <div class="col-4 text-center">Wednesday</div>
+            <div class="col-4 text-center">-9 °C</div>
+            <div class="col-4 text-center">
+              <img src="images/Clouds-wind.svg" alt="" height="25px" />
+            </div>
+          </div>
+         -->
         </div>
 
-        <br />
-        <h2>Vilnius</h2>
-        <p>Tuesday, January 10, 17:37</p>
-        <br />
-
-        <div class="row">
-          <div class="col-4">
-            <img src="images/Clouds-wind.svg" alt="" height="50px" />
-            <ul>
-              <li>Mostly cloudy</li>
-              <li>Feels like -15 °C</li>
-            </ul>
-          </div>
-          <div class="col-8"><h1>10 °C</h1></div>
-        </div>
-
-        <hr />
-        <div class="row">
-          <div class="col-4 text-center">
-            <img src="images/Humidity.svg" alt="" height="20px" /><br />
-            82%
-          </div>
-          <div class="col-4 text-center">
-            <img src="images/Wind-speed.svg" alt="" height="20px" /><br />
-            9 m/s
-          </div>
-          <div class="col-4 text-center">
-            <img src="images/Visibility.svg" alt="" height="17px" /><br />
-            1200 m
-          </div>
-        </div>
-        <hr />
-
-        <div class="row">
-          <div class="col-6">Wednesday</div>
-          <div class="col-3">-9 °C</div>
-          <div class="col-3">
-            <img src="images/Clouds-wind.svg" alt="" height="25px" />
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-6">Thursday</div>
-          <div class="col-3">-9 °C</div>
-          <div class="col-3">
-            <img src="images/Clouds-wind.svg" alt="" height="25px" />
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-6">Friday</div>
-          <div class="col-3">-9 °C</div>
-          <div class="col-3">
-            <img src="images/Clouds-wind.svg" alt="" height="25px" />
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-6">Saturday</div>
-          <div class="col-3">-9 °C</div>
-          <div class="col-3">
-            <img src="images/Clouds-wind.svg" alt="" height="25px" />
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-6">Sunday</div>
-          <div class="col-3">-9 °C</div>
-          <div class="col-3">
-            <img src="images/Clouds-wind.svg" alt="" height="25px" />
-          </div>
-        </div>
+        <small>
+          <a href="https://github.com/smilg-m/weather-app-new" target="_blank">
+            Open-source code</a
+          >
+          , by Miglė Vasiliauskaitė
+        </small>
       </div>
     </div>
-    <small>
-      <a href="https://github.com/smilg-m/weather-app-new" target="_blank">
-        Open-sourse code</a
-      >
-      , by Miglė Vasiliauskaitė
-    </small>
 
-    <script src="src/app/js"></script>
+    <script src="src/app.js"></script>
   </body>
 </html>
