@@ -74,8 +74,27 @@ function search(city) {
   let apiKey = "a3eff06504c1b7o0f0182e14a7e1e6dt";
   let units = "metric";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+  console.log(apiUrl);
   axios.get(apiUrl).then(updateTemperature);
 }
+
+function extractLocation(position) {
+  let apiKey = "a3eff06504c1b7o0f0182e14a7e1e6dt";
+  let units = "metric";
+  let longtitude = position.coords.latitude;
+  let latitude = position.coords.latitude;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longtitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(updateTemperature);
+}
+
+function currentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(extractLocation);
+}
+
+let currentLocationButton = document.querySelector("#current-location");
+currentLocationButton.addEventListener("submit", currentLocation);
 
 function citySubmit(event) {
   event.preventDefault();
