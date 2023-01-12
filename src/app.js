@@ -70,10 +70,20 @@ function updateTemperature(response) {
   iconElement.setAttribute("alt", `${response.data.condition.description}`);
 }
 
-let apiKey = "a3eff06504c1b7o0f0182e14a7e1e6dt";
-let units = "metric";
-let city = "Vilnius";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-console.log(apiUrl);
+function search(city) {
+  let apiKey = "a3eff06504c1b7o0f0182e14a7e1e6dt";
+  let units = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(updateTemperature);
+}
 
-axios.get(apiUrl).then(updateTemperature);
+function citySubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("New York");
+
+let searchForm = document.querySelector("#search-area");
+searchForm.addEventListener("submit", citySubmit);

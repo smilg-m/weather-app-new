@@ -97,10 +97,6 @@ li:first-letter {
   margin-bottom: 15px;
 }
 
-.search-area {
-  max-width: 480px;
-}
-
 .form-control {
   border-radius: 0;
   border-color: #000000;
