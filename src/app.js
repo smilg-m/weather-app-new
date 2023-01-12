@@ -78,11 +78,11 @@ function search(city) {
 }
 
 function extractLocation(position) {
-  let longtitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
   let apiKey = "a3eff06504c1b7o0f0182e14a7e1e6dt";
   let units = "metric";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longtitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
   console.log(apiUrl);
   axios.get(apiUrl).then(updateTemperature);
 }
