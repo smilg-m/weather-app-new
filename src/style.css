@@ -1,6 +1,12 @@
 body {
   font-family: "Heebo", sans-serif;
   color: #000000;
+  background: linear-gradient(
+    109.6deg,
+    rgb(204, 228, 247) 11.2%,
+    rgb(237, 246, 250) 100.2%
+  );
+  background-attachment: fixed;
 }
 
 h1 {
@@ -93,8 +99,9 @@ li:first-letter {
 
 .weather-app {
   padding: 50px;
-  border: 1px solid #000000;
+
   margin-bottom: 15px;
+  background: white;
 }
 
 .form-control {
@@ -102,7 +109,7 @@ li:first-letter {
   border-color: #000000;
 }
 
-.btn-outline-dark {
+.btn {
   border-radius: 0;
 }
 
@@ -117,7 +124,7 @@ li:first-letter {
 }
 
 .weather-description {
-  margin-top: -22px;
+  margin-top: -24px;
 }
 
 .feels-like {
