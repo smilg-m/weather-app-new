@@ -40,7 +40,8 @@ function formatTime(timestamp) {
   return `${weekday}, ${month} ${day}, ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
@@ -70,7 +71,7 @@ function getForecast(coordinates) {
   let apiKey = "a3eff06504c1b7o0f0182e14a7e1e6dt";
   let latitude = coordinates.latitude;
   let longitude = coordinates.longitude;
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
@@ -139,7 +140,6 @@ function citySubmit(event) {
 }
 
 search("New York");
-displayForecast();
 
 let searchForm = document.querySelector("#search-area");
 searchForm.addEventListener("submit", citySubmit);
