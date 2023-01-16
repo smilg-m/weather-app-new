@@ -88,7 +88,7 @@ function getForecast(coordinates) {
   let latitude = coordinates.latitude;
   let longitude = coordinates.longitude;
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -137,7 +137,7 @@ function extractLocation(position) {
   let apiKey = "a3eff06504c1b7o0f0182e14a7e1e6dt";
   let units = "metric";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(updateTemperature);
 }
 
