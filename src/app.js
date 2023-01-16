@@ -40,6 +40,32 @@ function formatTime(timestamp) {
   return `${weekday}, ${month} ${day}, ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col text-center">
+              <div class="temp-forecast-day">${day}</div>
+              <img src="images/Clouds-wind.svg" alt="#" height="32px" />
+              <div class="forecast-temperatures">
+                <h5>
+                  <span class="temp-min">-3&NonBreakingSpace;</span>
+                  <span class="temp-max">-7</span>
+                </h5>
+              </div>
+            </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function updateTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -102,6 +128,7 @@ function citySubmit(event) {
 }
 
 search("New York");
+displayForecast();
 
 let searchForm = document.querySelector("#search-area");
 searchForm.addEventListener("submit", citySubmit);
