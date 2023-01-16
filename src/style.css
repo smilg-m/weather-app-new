@@ -47,8 +47,10 @@ h5 {
   margin-bottom: 0;
 }
 
-hr.regular {
-  padding-bottom: 20px;
+hr {
+  padding-bottom: 15px;
+  height: 4px;
+  border-color: rgb(69, 120, 168);
 }
 
 a {
@@ -137,8 +139,8 @@ li:first-letter {
 }
 
 .temp-forecast-day {
-  margin-bottom: 15px;
-  font-weight: 300;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .forecast-temperatures {
