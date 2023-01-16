@@ -48,12 +48,7 @@ h5 {
 }
 
 hr.regular {
-  padding-bottom: 10px;
-}
-
-hr.divider {
-  padding-bottom: 30px;
-  padding-top: 5px;
+  padding-bottom: 20px;
 }
 
 a {
@@ -68,9 +63,10 @@ a:hover {
 small {
   display: block;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   color: #757575;
+  font-weight: 300;
 }
 
 ul {
@@ -99,9 +95,8 @@ li:first-letter {
 
 .weather-app {
   padding: 50px;
-
-  margin-bottom: 15px;
-  background: white;
+  margin-bottom: 10px;
+  background: rgb(255, 255, 255);
 }
 
 .form-control {
@@ -129,4 +124,23 @@ li:first-letter {
 
 .feels-like {
   font-weight: 500;
+}
+
+.weather-forecast-block {
+  padding: 50px;
+  margin-bottom: 15px;
+  background: rgb(255, 255, 255);
+}
+
+.temp-max {
+  font-weight: 300;
+}
+
+.temp-forecast-day {
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.forecast-temperatures {
+  margin-top: 15px;
 }
